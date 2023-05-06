@@ -48,4 +48,4 @@ frontend themunyasya21-frontend-https
 backend themunyasya21-backend
         balance roundrobin
         server 168633-web-01 100.26.234.33:80 check
-    	server 168633-web-01 52.3.245.204:80 check
+    	server 168633-web-02 52.3.245.204:80 check

@@ -33,7 +33,7 @@ defaults
         errorfile 503 /etc/haproxy/errors/503.http
         errorfile 504 /etc/haproxy/errors/504.http
 
-frontend themunyasya21-frontend
+frontend themunyasya21frontend
         bind *:80
         mode http
         http-request redirect scheme https code 301 unless { ssl_fc }
@@ -45,7 +45,7 @@ frontend clickviral-frontend-https
         http-request set-header X-Forwarded-Proto https
         default_backend themunyasya21-backend
 
-backend themunyasya21backend
+backend themunyasya21-backend
         balance roundrobin
         server 168633-web-01 100.26.234.33:80 check
     	server 168633-web-02 52.3.245.204:80 check
